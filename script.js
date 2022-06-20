@@ -8,6 +8,17 @@ function generatePassword(){
     alert("Password must be between 8 and 128 characters!");
     return generatePassword();
   }
+var lowercase = prompt("Would you like to include lowercase in your password? type YES or NO");
+if(lowercase === "YES")
+console.log(lowercase);
+else(lowercase === "NO");
+
+var uppercase = prompt("Would you like to include uppercase in your password? type YES or NO")
+if (uppercase === "YES")
+console.log(uppercase);
+else(lowercase === "NO");
+
+
   return 'password';
 }
 
@@ -18,7 +29,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-  
+
 }
 
 // Add event listener to generate button
