@@ -8,7 +8,7 @@ function generatePassword(){
     alert("Password must be between 8 and 128 characters!");
     return generatePassword();
   }
-  return "password";
+  return 'password';
 }
 
 // Write password to the #password input
@@ -18,6 +18,7 @@ function writePassword() {
 
   passwordText.value = password;
 
+  
 }
 
 // Add event listener to generate button
