@@ -8,15 +8,28 @@ function generatePassword(){
     alert("Password must be between 8 and 128 characters!");
     return generatePassword();
   }
-var lowercase = prompt("Would you like to include lowercase in your password? type YES or NO");
-if(lowercase === "YES")
-console.log(lowercase);
-else(lowercase === "NO");
+var lowercase = window.alert("Would you like to include lowercase in your password?");
+if (lowercase){
 
-var uppercase = prompt("Would you like to include uppercase in your password? type YES or NO")
-if (uppercase === "YES")
-console.log(uppercase);
-else(lowercase === "NO");
+}
+
+
+var uppercase = window.alert("Would you like to include uppercase in your password?")
+if (uppercase){
+
+}
+
+var numeric = window.alert("Would you like to include numeric values in your password?")
+if (numeric ){
+
+}
+
+
+var specialcharacters = window.alert("would you like to include special characters?")
+if (specialcharacters ){
+
+}
+
 
 
   return 'password';
