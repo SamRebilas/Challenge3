@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var specialCharacters = ["!", "#", "$", "%","^", "&", "*", "(", ")", "-", "_", "=", "+"];
+var lowercase = "abcdefghijklmnopqrstuvwxyz"
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numeric = "1234567890"
+var specialCharacters = "!#$%^&*(),_=+"
 var finalPassword = "";
 
 
@@ -54,16 +54,46 @@ if (isLowercase && isUppercase && isNumeric && isSpecialCharacters){
 if (isLowercase && isUppercase && isNumeric){
   finalPassword = finalPassword + lowercase + uppercase + numeric;
 }
+if (isLowercase && isUppercase && isSpecialCharacters){
+  finalPassword = finalPassword + lowercase + uppercase + numeric;
+}
+if (isSpecialCharacters && isUppercase && isNumeric){
+  finalPassword = finalPassword + specialCharacters + uppercase + numeric;
+}
+if (isLowercase && specialCharacters && isNumeric){
+  finalPassword = finalPassword + lowercase + specialCharacters + numeric;
+}
 if (isLowercase && isUppercase ){
   finalPassword = finalPassword + lowercase + uppercase;
+}
+if (isNumeric && isUppercase ){
+  finalPassword = finalPassword + numeric + uppercase;
+}
+if (isSpecialCharacters && isUppercase ){
+  finalPassword = finalPassword + specialCharacters + uppercase;
+}
+if (isLowercase && isNumeric ){
+  finalPassword = finalPassword + lowercase + numeric;
+}
+if (isLowercase && isSpecialCharacters ){
+  finalPassword = finalPassword + lowercase + specialCharacters;
+}
+if (isNumeric && isSpecialCharacters ){
+  finalPassword = finalPassword + numeric + specialCharacters;
 }
 if (isLowercase){
   finalPassword = finalPassword + lowercase;
 }
-
-if (isLowercase && isUppercase && isNumeric){
-  finalPassword = finalPassword + lowercase + uppercase + numeric;
+if (isUppercase){
+  finalPassword = finalPassword + uppercase;
 }
+if (isNumeric){
+  finalPassword = finalPassword + numeric;
+}
+if (isSpecialCharacters){
+  finalPassword = finalPassword + specialCharacters;
+}
+
 var choices = ""
 for (var i = 0; i < length; i++){
   choices += finalPassword[Math.floor(Math.random() * finalPassword.length)];
